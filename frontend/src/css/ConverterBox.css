@@ -1,0 +1,78 @@
+.converter-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.6s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.converter-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.238);
+}
+
+.converter-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.converter-box:hover .converter-logo {
+  transform: scale(1.1);
+}
+
+.converter-box h3 {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.converter-box p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.converter-logo.loading {
+  opacity: 0.5;
+}
+
+.converter-logo.loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.converter-logo-fallback {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.converter-box {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.converter-box:hover {
+  transform: translateY(-2px);
+}
