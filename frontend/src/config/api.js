@@ -11,8 +11,8 @@ export const API_ENDPOINTS = {
   DCT_DECODE: "/api/decode",
 
   // DWT Algorithm
-  DWT_ENCODE: "/api/dwt/encode",
-  DWT_DECODE: "/api/dwt/decode",
+  DWT_ENCODE: "/api/encode",
+  DWT_DECODE: "/api/decode",
 
   // PVD Algorithm
   PVD_ENCODE: "/api/encode",
