@@ -34,7 +34,8 @@ function buildHeader({ payloadLength, encrypted = false, salt, iv, authTag }, pl
 function parseHeader(buf) {
   if (buf.length < 41) throw new Error('Header buffer too short');
   const magic = buf.slice(0, 4).toString('ascii');
-  if (magic !== 'STG1') throw new Error('Invalid magic');
+  console.log('Magic:', magic);
+  if (magic !== 'STG1') throw new Error(magic);
   const flags = buf.readUInt8(4);
   const encrypted = (flags & 1) === 1;
   const payloadLength = buf.readUInt32BE(5);
